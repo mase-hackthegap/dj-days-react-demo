@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import AlbumMessage from './components/AlbumMessage';
+import AlbumListing from './components/AlbumListing';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <> 
+      <Header HeaderContent="DJ Days React Demo"/>
+      <AlbumMessage MessageContent="You need more albums"/>
+      <AlbumListing
+        AlbumName="Lemonade"
+        AlbumArtist="Beyonce"
+        AlbumGenre="RnB"
+      />
+      <AlbumListing 
+        AlbumName="Damn"
+        AlbumArtist="Kendrick Lamar"
+        AlbumGenre="Rap"
+      />
+      <AlbumListing
+        AlbumName="Back to Black"
+        AlbumArtist="Amy Winehouse"
+        AlbumGenre="RnB"
+      />
+    </>
   );
 }
 
